@@ -831,7 +831,7 @@ async function flexcleanSendAlleMailsSilent({
 
     var REINIGUNG_STUNDEN = { bis40: 1.5, '41-70': 2.5, '71-100': 3.5, '101-150': 5.0, ueber150: 7.0 };
     var ZUSATZ_STUNDEN   = { fenster: 0.75, backofen: 0.5, kuehlschrank: 0.25, buegeln: 1.0, balkon: 0.5, auto: 0.5 };
-    var REINIGUNG_RATE = 28.50;
+    var REINIGUNG_RATE = 55;
     var MASSAGE_RATE   = 1.00; // CHF/min
     var MASSAGE_MIN    = 60;
 
@@ -845,13 +845,13 @@ async function flexcleanSendAlleMailsSilent({
       var art = _qc.art, fl = _qc.flaeche;
       if (art === 'massage') {
         var t = MASSAGE_RATE * MASSAGE_MIN;
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF  / Std. nach Vereinbarung', noteStr:'' };
       }
       if (art === 'reinigung') {
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 55 / Std.', noteStr:'' };
       }
       if (art === 'kombi') {
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 61 / Std.', noteStr:'' };
       }
       return null;
     }
@@ -4005,12 +4005,12 @@ async function flexcleanSendAlleMailsSilent({
     <h3 style="font-size:1.6rem; color:var(--navy); margin-bottom:8px;">Sie legen den Stundenpreis fest</h3>
     <p style="color:var(--muted); font-size:0.9rem; line-height:1.65; margin-bottom:20px;">Bei FLEXCLEAN & RELAXTEAM bestimmen Sie selbst, was die Arbeit wert ist — fair, transparent und ohne versteckte Kosten.</p>
     <div class="pricing-highlight">
-      <div class="big">ab CHF 28.50</div>
+      <div class="big">ab CHF 55</div>
       <div class="sub">Stundenpreis — von Ihnen frei wählbar · je nach Erfahrung & Aufwand</div>
     </div>
-    <div class="pricing-row"><span class="label">Grundpreis (Minimum)</span><span class="value">CHF 28.50 / Std.</span></div>
-    <div class="pricing-row"><span class="label">Empfohlener Preis (Standard)</span><span class="value">CHF 32–38 / Std.</span></div>
-    <div class="pricing-row"><span class="label">Intensivreinigung / Erfahren</span><span class="value">CHF 38–45 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Grundpreis (Minimum)</span><span class="value">CHF 55 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Empfohlener Preis (Standard)</span><span class="value">CHF 56-61 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Intensivreinigung / Erfahren</span><span class="value">CHF 62-70 / Std.</span></div>
     <div style="background:var(--cream); border-radius:10px; padding:16px 18px; margin-top:20px; font-size:0.85rem; color:var(--muted); line-height:1.65;">
       <strong style="color:var(--navy);">Ihre Zufriedenheit zählt:</strong> Nach jedem Einsatz können Sie Feedback geben. Bei anhaltender Unzufriedenheit passen wir den Einsatz an oder wechseln das Teammitglied — ohne Aufwand für Sie.
     </div>
@@ -4513,17 +4513,17 @@ async function flexcleanSendAlleMailsSilent({
         <div id="step2-massage-lines" style="display:flex; flex-direction:column; gap:4px; margin-top:6px;"></div>
       </div>
 
-      <!-- Standard 28.50 + manuell -->
+      <!-- Standard 55 + manuell -->
       <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
 
-        <!-- CHF 28.50 -->
+        <!-- CHF 55 -->
         <div id="preis-btn-standard" onclick="selectPreisOption('standard')"
           style="cursor:pointer; border:2px solid var(--mint); border-radius:12px; padding:13px 18px; background:var(--mint-light); display:flex; align-items:center; gap:14px; transition:all 0.2s;">
           <div id="preis-radio-standard" style="width:22px; height:22px; border-radius:50%; border:2px solid var(--mint); background:var(--mint); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <div style="width:9px; height:9px; border-radius:50%; background:var(--white);"></div>
           </div>
           <div style="flex:1;">
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem;">CHF 28.50 / Std.</div>
+            <div style="font-weight:700; color:var(--navy); font-size:0.95rem;">CHF 55 / Std.</div>
             <div style="font-size:0.75rem; color:var(--muted); margin-top:1px;">Standard FLEXCLEAN & RELAXTEAM Tarif</div>
           </div>
         </div>
@@ -7810,7 +7810,7 @@ function kpRenderGebuchteKand() {
   // Stunden/Preis Infokarten
   const rec      = (snap && (snap.stundenFinal || snap.stundenRec || snap.stundenUnterhalt)) || 0;
   const recRaw   = (snap && (snap.stundenRec || snap.stundenUnterhalt)) || 0;
-  const preis    = (snap && snap.preis) || window._stundenPreis || 28.5;
+  const preis    = (snap && snap.preis) || window._stundenPreis || 55;
   const haeuf    = (snap && snap.haeufUnterhalt) || (snap && snap.haeufGrund) || '';
 
   // ── Exakte Häufigkeitstabelle ─────────────────────────────────────────────
@@ -9320,7 +9320,7 @@ function onPreisManuellInput() {
 
 function confirmPreisUndKapazitaet() {
   // Preis bestimmen
-  let preis = 28.5;
+  let preis = 55;
   const sel = window._preisOptionSelected || 'standard';
   if (sel === 'manuell') {
     const inputVal = parseFloat(document.getElementById('preis-manuell-input')?.value);
@@ -9359,7 +9359,7 @@ function _zeigeBannerDirekt() {
   const kundenEmail = kundenData.email   || (function(){ try { return localStorage.getItem('flexclean_kunde_email') || ''; } catch(e) { return ''; } })();
   const kundenTel   = kundenData.telefon || '';
   const kundenAdresse = [kundenData.strasse, kundenData.stockwerk ? 'Stk. '+kundenData.stockwerk : '', kundenData.plz, kundenData.ort, kundenData.land].filter(Boolean).join(', ');
-  const preisProStd = window._stundenPreis || anfSnap.preis || 28.5;
+  const preisProStd = window._stundenPreis || anfSnap.preis || 55;
 
   const _fmtH = v => { if (!v) return '–'; const h=Math.floor(v); const min=Math.round((v-h)*60); if(min===0) return h+' Std.'; if(h===0) return min+' Min.'; return h+' Std. '+min+' Min.'; };
   const _haeufLabel = { taeglich:'Täglich','1pw':'1× pro Woche','2pw':'2× pro Woche','3pw':'3× pro Woche','4pw':'4× pro Woche','5pw':'5× pro Woche','6pw':'6× pro Woche','7pw':'7× pro Woche','1p2w':'1× alle 2 Wochen','2p2w':'2× alle 2 Wochen','1pm':'1× pro Monat','2pm':'2× pro Monat','3pm':'3× pro Monat','1pj':'1× pro Jahr','einmalig':'Einmalig' };
@@ -9982,7 +9982,7 @@ function updateStundenEmpfehlung() {
   const _massageAktivPr = document.getElementById('cb-massage')?.checked;
   if (preisEl) {
     if (qm > 0 || _massageAktivPr) {
-      const preisProStd = window._stundenPreis || 28.5;
+      const preisProStd = window._stundenPreis || 55;
 
       // ── Häufigkeits-Lookup-Tabellen ──────────────────────────────────────
       const HAEUF_PM = {
@@ -10880,7 +10880,7 @@ function kapJaProfile() {
   const kundenEmail = kundenData.email   || (function(){ try { return localStorage.getItem('flexclean_kunde_email') || ''; } catch(e) { return ''; } })();
   const kundenTel   = kundenData.telefon || '';
   const kundenAdresse = [kundenData.strasse, kundenData.stockwerk ? 'Stk. '+kundenData.stockwerk : '', kundenData.plz, kundenData.ort, kundenData.land].filter(Boolean).join(', ');
-  const preisProStdBanner = window._stundenPreis || anfSnap.preis || 28.5;
+  const preisProStdBanner = window._stundenPreis || anfSnap.preis || 55;
 
   // Hilfsfunktionen
   const _fmtH = v => {
@@ -11744,7 +11744,7 @@ function kpRenderBuchung() {
   return;
 
   const rec       = window._kapRundungOverride || window._kapRec || 0;
-  const preis     = window._stundenPreis || 28.5;
+  const preis     = window._stundenPreis || 55;
   const haeuf     = window._modalHaeufigkeit || '';
 
   // Kandidat: zuerst aus Arbeitsspeicher, sonst ersten gespeicherten laden
@@ -11889,7 +11889,7 @@ function kpSnapshotAnforderungen() {
     stundenUnterhalt: (() => { const qm = parseFloat(g('inp-qm')?.value) || 0; return qm > 0 ? Math.round((qm * 0.95 / 60) * 12) / 12 : (parseFloat(g('sel-unterhalt')?.value) || 0); })(),
     stundenNurUnterhalt: (() => { const qm = parseFloat(g('inp-qm')?.value) || 0; return qm > 0 ? Math.round((qm * 0.95 / 60) * 12) / 12 : (parseFloat(g('sel-unterhalt')?.value) || 0); })(),
     stundenGrund: (() => { const cb = document.getElementById('cb-grundreinigung'); const qm = parseFloat(g('inp-qm')?.value) || 0; return (cb && cb.checked) ? (qm > 0 ? Math.round((qm * 5 / 60) * 4) / 4 : (parseFloat(g('sel-grund')?.value) || 0)) : 0; })(),
-    preis:        window._stundenPreis || 28.5,
+    preis:        window._stundenPreis || 55,
     massage:      !!(document.getElementById('cb-massage')?.checked),
     massageMin:   (document.getElementById('cb-massage')?.checked) ? (parseInt(document.getElementById('massage-zeit-val')?.value) || parseInt(document.getElementById('cb-massage')?.dataset.min) || 60) : 0,
     hinweis:      g('sonstige-hinweise-text')?.value || '',
@@ -12273,7 +12273,7 @@ function kpRenderBuchenPanel(snap) {
   // Immer snap als Primärquelle — window._* nur als Fallback wenn snap noch nicht gespeichert
   const rec          = snap?.stundenFinal || snap?.stundenRec || snap?.stundenUnterhalt || window._kapRundungOverride || window._kapRec || 0;
   const recRaw       = snap?.stundenRec   || snap?.stundenUnterhalt || window._kapRec || 0;
-  const preis        = snap?.preis        || window._stundenPreis || 28.5;
+  const preis        = snap?.preis        || window._stundenPreis || 55;
   const haeuf        = haeufLabels[snap?.haeufUnterhalt || snap?.haeufGrund || window._modalHaeufigkeit] || '–';
   const aufgerundet  = !!(snap?.istAufgerundet) && rec > 0 && recRaw > 0 && Math.abs(rec - recRaw) > 0.01;
   const stundenText  = fmtH(rec);
@@ -16396,7 +16396,7 @@ function kpErstelleSeparateRechnung() {
 
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
+  const preis = (snap && snap.preis) || window._stundenPreis || 55;
 
   // Slots die verrechnet werden sollen — alleNeueSlots falls vorhanden, sonst nur der eine blKey
   const slots = buch.alleNeueSlots || [{ blKey: buch.blKey, leistung: buch.leistung }];
@@ -16576,7 +16576,7 @@ function kpErstelleTagesRechnung(dateKey, nurBlKey) {
   // ── Snap für Preise / Stunden
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
+  const preis = (snap && snap.preis) || window._stundenPreis || 55;
 
   // ── Leistungen sammeln: wenn nurBlKey angegeben, NUR diesen Slot verrechnen
   // { leistungLabel → blKey }
@@ -16892,7 +16892,7 @@ function kpErstelleRechnung() {
   // Snap für Preise und Stunden
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
+  const preis = (snap && snap.preis) || window._stundenPreis || 55;
 
   const _LB_HAEUF_LOCAL = {
     '1pw':{label:'1× / Woche',pw:1,pj:52},'2pw':{label:'2× / Woche',pw:2,pj:104},
