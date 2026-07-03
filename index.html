@@ -1,10 +1,59 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <link rel="icon" href="data:,">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="assets/favicon-512.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FLEXCLEAN & RELAXTEAM – Professionelle Reinigung & Massage</title>
+<title>Reinigungsservice & Mobile Massage Schweiz | FLEXCLEAN & RELAXTEAM</title>
+<meta name="description" content="FLEXCLEAN & RELAXTEAM: Professionelle Reinigung und mobile Massage – flexibel buchbar in der ganzen Schweiz. Geprüftes Personal, transparente Preise, diskrete Concierge-Services für Privat und Gewerbe.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.flexclean-relaxteam.com/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FLEXCLEAN & RELAXTEAM">
+<meta property="og:title" content="Reinigungsservice & Mobile Massage Schweiz | FLEXCLEAN & RELAXTEAM">
+<meta property="og:description" content="Flexible Reinigungs- und mobile Massage-Services für Privat und Gewerbe – buchbar in der ganzen Schweiz.">
+<meta property="og:url" content="https://www.flexclean-relaxteam.com/">
+<meta property="og:locale" content="de_CH">
+<meta property="og:image" content="https://www.flexclean-relaxteam.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Reinigungsservice & Mobile Massage Schweiz | FLEXCLEAN & RELAXTEAM">
+<meta name="twitter:description" content="Flexible Reinigungs- und mobile Massage-Services für Privat und Gewerbe – buchbar in der ganzen Schweiz.">
+<meta name="twitter:image" content="https://www.flexclean-relaxteam.com/assets/og-image.jpg">
+
+<!-- JSON-LD Strukturierte Daten (echte Geschäftsdaten aus dem Seiteninhalt) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "FLEXCLEAN & RELAXTEAM",
+  "description": "Professionelle Reinigung und mobile Massage / Concierge-Service für Privat und Gewerbe – buchbar in der ganzen Schweiz.",
+  "url": "https://www.flexclean-relaxteam.com/",
+  "logo": "https://www.flexclean-relaxteam.com/assets/favicon-512.png",
+  "image": "https://www.flexclean-relaxteam.com/assets/og-image.jpg",
+  "telephone": "+41762779430",
+  "email": "info@flexclean-relaxteam.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Baarerstrasse 43",
+    "postalCode": "6300",
+    "addressLocality": "Zug",
+    "addressCountry": "CH"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Schweiz"
+  }
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -831,7 +880,7 @@ async function flexcleanSendAlleMailsSilent({
 
     var REINIGUNG_STUNDEN = { bis40: 1.5, '41-70': 2.5, '71-100': 3.5, '101-150': 5.0, ueber150: 7.0 };
     var ZUSATZ_STUNDEN   = { fenster: 0.75, backofen: 0.5, kuehlschrank: 0.25, buegeln: 1.0, balkon: 0.5, auto: 0.5 };
-    var REINIGUNG_RATE = 55;
+    var REINIGUNG_RATE = 28.50;
     var MASSAGE_RATE   = 1.00; // CHF/min
     var MASSAGE_MIN    = 60;
 
@@ -845,13 +894,13 @@ async function flexcleanSendAlleMailsSilent({
       var art = _qc.art, fl = _qc.flaeche;
       if (art === 'massage') {
         var t = MASSAGE_RATE * MASSAGE_MIN;
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF  / Std. nach Vereinbarung', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
       }
       if (art === 'reinigung') {
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 55 / Std.', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
       }
       if (art === 'kombi') {
-        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 61 / Std.', noteStr:'' };
+        return { priceStr:'Sie legen den Preis fest', labelStr:'Mindestpreis: CHF 28.50 / Std.', noteStr:'' };
       }
       return null;
     }
@@ -1172,7 +1221,7 @@ async function flexcleanSendAlleMailsSilent({
   <div class="how-section">
     <div class="section-header">
       <div class="section-tag">Ihre Vorteile</div>
-      <h2>Was bedeutet Flexibilität bei FLEXCLEAN & RELAXTEAM?</h2>
+      <h2>Reinigung &amp; mobile Massage in der ganzen Schweiz — was bedeutet Flexibilität bei FLEXCLEAN &amp; RELAXTEAM?</h2>
       <p>Sie haben die volle Kontrolle — ohne administrativen Aufwand.</p>
     </div>
     <div class="flex-cards">
@@ -1474,7 +1523,7 @@ async function flexcleanSendAlleMailsSilent({
     </div>
     <div class="subpage-hero-right">
       <div class="subpage-hero-eyebrow">Ihr Weg zu mehr Lebensqualität</div>
-      <h1>In <em>7 Schritten</em> zum<br>modernen Lifestyle</h1>
+      <h2>In <em>7 Schritten</em> zum<br>modernen Lifestyle</h2>
       <div class="subpage-hero-right-rule"></div>
       <p>Transparent, effizient und nach Ihren Vorstellungen.</p>
       <div class="usp-band" style="margin: 20px -52px 0; border-top: 0.5px solid rgba(201,160,80,0.2); border-bottom: 0.5px solid rgba(201,160,80,0.2);">
@@ -3151,7 +3200,7 @@ async function flexcleanSendAlleMailsSilent({
     </div>
     <div class="subpage-hero-right">
       <div class="subpage-hero-eyebrow">Geprüft · Erfahren · Vertrauenswürdig</div>
-      <h1>Unser <em>Team</em> —<br>transparent vorgestellt</h1>
+      <h2>Unser <em>Team</em> —<br>transparent vorgestellt</h2>
       <div class="subpage-hero-right-rule"></div>
       <p>Geprüfte, erfahrene Fachkräfte — transparent vorgestellt, damit Sie die richtige Wahl treffen können.</p>
     </div>
@@ -3698,7 +3747,7 @@ async function flexcleanSendAlleMailsSilent({
 
 
 <!-- ═══════════════ REFERENZEN ═══════════════ -->
-<section id="referenzen">
+<section id="referenzen" style="display:none !important;">
   <div class="subpage-hero">
     <div class="subpage-hero-left">
       <div class="hero-logo-wrap">
@@ -3712,7 +3761,7 @@ async function flexcleanSendAlleMailsSilent({
           </div>
     <div class="subpage-hero-right">
       <div class="subpage-hero-eyebrow">Echte Erfahrungen · Echte Menschen</div>
-      <h1>Was unsere <em>Kunden</em><br>sagen</h1>
+      <h2>Was unsere <em>Kunden</em><br>sagen</h2>
       <div class="subpage-hero-right-rule"></div>
       <p>Echte Erfahrungen von Menschen, die FLEXCLEAN & RELAXTEAM vertrauen.</p>
     </div>
@@ -3903,7 +3952,6 @@ async function flexcleanSendAlleMailsSilent({
       <a href="#" onclick="showSection('home')">Home</a>
       <a href="#" onclick="showSection('kunde')">Für Kunden</a>
       <a href="#" onclick="showSection('team')">Teammitglied</a>
-      <a href="#" onclick="showSection('referenzen')">Referenzen</a>
     </div>
     <div class="footer-col">
       <h4>Rechtliches</h4>
@@ -4005,12 +4053,12 @@ async function flexcleanSendAlleMailsSilent({
     <h3 style="font-size:1.6rem; color:var(--navy); margin-bottom:8px;">Sie legen den Stundenpreis fest</h3>
     <p style="color:var(--muted); font-size:0.9rem; line-height:1.65; margin-bottom:20px;">Bei FLEXCLEAN & RELAXTEAM bestimmen Sie selbst, was die Arbeit wert ist — fair, transparent und ohne versteckte Kosten.</p>
     <div class="pricing-highlight">
-      <div class="big">ab CHF 55</div>
+      <div class="big">ab CHF 28.50</div>
       <div class="sub">Stundenpreis — von Ihnen frei wählbar · je nach Erfahrung & Aufwand</div>
     </div>
-    <div class="pricing-row"><span class="label">Grundpreis (Minimum)</span><span class="value">CHF 55 / Std.</span></div>
-    <div class="pricing-row"><span class="label">Empfohlener Preis (Standard)</span><span class="value">CHF 56-61 / Std.</span></div>
-    <div class="pricing-row"><span class="label">Intensivreinigung / Erfahren</span><span class="value">CHF 62-70 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Grundpreis (Minimum)</span><span class="value">CHF 28.50 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Empfohlener Preis (Standard)</span><span class="value">CHF 32–38 / Std.</span></div>
+    <div class="pricing-row"><span class="label">Intensivreinigung / Erfahren</span><span class="value">CHF 38–45 / Std.</span></div>
     <div style="background:var(--cream); border-radius:10px; padding:16px 18px; margin-top:20px; font-size:0.85rem; color:var(--muted); line-height:1.65;">
       <strong style="color:var(--navy);">Ihre Zufriedenheit zählt:</strong> Nach jedem Einsatz können Sie Feedback geben. Bei anhaltender Unzufriedenheit passen wir den Einsatz an oder wechseln das Teammitglied — ohne Aufwand für Sie.
     </div>
@@ -4378,7 +4426,7 @@ async function flexcleanSendAlleMailsSilent({
     <div class="cal-body">
       <div class="cal-month-nav">
         <button class="cal-nav-btn" onclick="changeMonth(-1)">← Vorheriger Monat</button>
-        <h4 id="cal-month-title">Juni 2026</h4>
+        <h4 id="cal-month-title">September 2026</h4>
         <button class="cal-nav-btn" onclick="changeMonth(1)">Nächster Monat →</button>
       </div>
 
@@ -4513,17 +4561,17 @@ async function flexcleanSendAlleMailsSilent({
         <div id="step2-massage-lines" style="display:flex; flex-direction:column; gap:4px; margin-top:6px;"></div>
       </div>
 
-      <!-- Standard 55 + manuell -->
+      <!-- Standard 28.50 + manuell -->
       <div style="display:flex; flex-direction:column; gap:8px; margin-bottom:16px;">
 
-        <!-- CHF 55 -->
+        <!-- CHF 28.50 -->
         <div id="preis-btn-standard" onclick="selectPreisOption('standard')"
           style="cursor:pointer; border:2px solid var(--mint); border-radius:12px; padding:13px 18px; background:var(--mint-light); display:flex; align-items:center; gap:14px; transition:all 0.2s;">
           <div id="preis-radio-standard" style="width:22px; height:22px; border-radius:50%; border:2px solid var(--mint); background:var(--mint); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
             <div style="width:9px; height:9px; border-radius:50%; background:var(--white);"></div>
           </div>
           <div style="flex:1;">
-            <div style="font-weight:700; color:var(--navy); font-size:0.95rem;">CHF 55 / Std.</div>
+            <div style="font-weight:700; color:var(--navy); font-size:0.95rem;">CHF 28.50 / Std.</div>
             <div style="font-size:0.75rem; color:var(--muted); margin-top:1px;">Standard FLEXCLEAN & RELAXTEAM Tarif</div>
           </div>
         </div>
@@ -6797,7 +6845,7 @@ function saveTeamProfil() {
 
 // ── Calendar state ──
 const CAL_MONTHS = ['Januar','Februar','März','April','Mai','Juni','Juli','August','September','Oktober','November','Dezember'];
-let calYear = 2026, calMonth = 5; // 0-indexed, June = 5
+let calYear = 2026, calMonth = 8; // 0-indexed, September = 8
 let activeCands = new Set(['sarah']);
 let bookedSlots = new Set(); // "dayIdx-timeIdx-cand"
 // Pre-booked by others
@@ -7810,7 +7858,7 @@ function kpRenderGebuchteKand() {
   // Stunden/Preis Infokarten
   const rec      = (snap && (snap.stundenFinal || snap.stundenRec || snap.stundenUnterhalt)) || 0;
   const recRaw   = (snap && (snap.stundenRec || snap.stundenUnterhalt)) || 0;
-  const preis    = (snap && snap.preis) || window._stundenPreis || 55;
+  const preis    = (snap && snap.preis) || window._stundenPreis || 28.5;
   const haeuf    = (snap && snap.haeufUnterhalt) || (snap && snap.haeufGrund) || '';
 
   // ── Exakte Häufigkeitstabelle ─────────────────────────────────────────────
@@ -9320,7 +9368,7 @@ function onPreisManuellInput() {
 
 function confirmPreisUndKapazitaet() {
   // Preis bestimmen
-  let preis = 55;
+  let preis = 28.5;
   const sel = window._preisOptionSelected || 'standard';
   if (sel === 'manuell') {
     const inputVal = parseFloat(document.getElementById('preis-manuell-input')?.value);
@@ -9359,7 +9407,7 @@ function _zeigeBannerDirekt() {
   const kundenEmail = kundenData.email   || (function(){ try { return localStorage.getItem('flexclean_kunde_email') || ''; } catch(e) { return ''; } })();
   const kundenTel   = kundenData.telefon || '';
   const kundenAdresse = [kundenData.strasse, kundenData.stockwerk ? 'Stk. '+kundenData.stockwerk : '', kundenData.plz, kundenData.ort, kundenData.land].filter(Boolean).join(', ');
-  const preisProStd = window._stundenPreis || anfSnap.preis || 55;
+  const preisProStd = window._stundenPreis || anfSnap.preis || 28.5;
 
   const _fmtH = v => { if (!v) return '–'; const h=Math.floor(v); const min=Math.round((v-h)*60); if(min===0) return h+' Std.'; if(h===0) return min+' Min.'; return h+' Std. '+min+' Min.'; };
   const _haeufLabel = { taeglich:'Täglich','1pw':'1× pro Woche','2pw':'2× pro Woche','3pw':'3× pro Woche','4pw':'4× pro Woche','5pw':'5× pro Woche','6pw':'6× pro Woche','7pw':'7× pro Woche','1p2w':'1× alle 2 Wochen','2p2w':'2× alle 2 Wochen','1pm':'1× pro Monat','2pm':'2× pro Monat','3pm':'3× pro Monat','1pj':'1× pro Jahr','einmalig':'Einmalig' };
@@ -9477,7 +9525,7 @@ function _zeigeBannerDirekt() {
       </div>
       ${summaryHtml}
       <div style="background:rgba(201,160,80,0.12);border:1.5px solid rgba(201,160,80,0.35);border-radius:12px;padding:14px 16px;margin-bottom:18px;font-size:0.85rem;line-height:1.65;color:rgba(255,255,255,0.85);">
-        🗓️ <strong style="color:var(--gold);">Kandidaten verfügbar ab 01. Juni 2026.</strong><br>
+        🗓️ <strong style="color:var(--gold);">Kandidaten verfügbar ab 01. September 2026.</strong><br>
         Die Kandidatinnen wurden geprüft (Strafregister, Betreibung, Arbeitsbewilligung) und stehen ab dem 1. Juni für Einsätze bereit.<br><br>
         <span style="color:rgba(255,255,255,0.65);">Sind Sie interessiert, weitere Informationen — inkl. Video und vollständiges Profil — zu erhalten und möchten Sie eine unverbindliche Anfrage stellen?</span>
       </div>
@@ -9982,7 +10030,7 @@ function updateStundenEmpfehlung() {
   const _massageAktivPr = document.getElementById('cb-massage')?.checked;
   if (preisEl) {
     if (qm > 0 || _massageAktivPr) {
-      const preisProStd = window._stundenPreis || 55;
+      const preisProStd = window._stundenPreis || 28.5;
 
       // ── Häufigkeits-Lookup-Tabellen ──────────────────────────────────────
       const HAEUF_PM = {
@@ -10880,7 +10928,7 @@ function kapJaProfile() {
   const kundenEmail = kundenData.email   || (function(){ try { return localStorage.getItem('flexclean_kunde_email') || ''; } catch(e) { return ''; } })();
   const kundenTel   = kundenData.telefon || '';
   const kundenAdresse = [kundenData.strasse, kundenData.stockwerk ? 'Stk. '+kundenData.stockwerk : '', kundenData.plz, kundenData.ort, kundenData.land].filter(Boolean).join(', ');
-  const preisProStdBanner = window._stundenPreis || anfSnap.preis || 55;
+  const preisProStdBanner = window._stundenPreis || anfSnap.preis || 28.5;
 
   // Hilfsfunktionen
   const _fmtH = v => {
@@ -11011,7 +11059,7 @@ function kapJaProfile() {
       </div>
       ${summaryHtml}
       <div style="background:rgba(201,160,80,0.12);border:1.5px solid rgba(201,160,80,0.35);border-radius:12px;padding:14px 16px;margin-bottom:18px;font-size:0.85rem;line-height:1.65;color:rgba(255,255,255,0.85);">
-        🗓️ <strong style="color:var(--gold);">Kandidaten verfügbar ab 01. Juni 2026.</strong><br>
+        🗓️ <strong style="color:var(--gold);">Kandidaten verfügbar ab 01. September 2026.</strong><br>
         Die Kandidatinnen wurden geprüft (Strafregister, Betreibung, Arbeitsbewilligung) und stehen ab dem 1. Juni für Einsätze bereit.<br><br>
         <span style="color:rgba(255,255,255,0.65);">Sind Sie interessiert, weitere Informationen — inkl. Video und vollständiges Profil — zu erhalten und möchten Sie eine unverbindliche Anfrage stellen?</span>
       </div>
@@ -11071,7 +11119,7 @@ function kapJaProfile() {
     if (zusatzArr.length) body += 'Extras:                  ' + zusatzArr.join(', ') + NL;
     if (anfSnap.hinweise) body += 'Hinweise:                ' + anfSnap.hinweise + NL;
 
-    body += NL + 'Kandidaten ab 01. Juni 2026 — ich bitte um Rückmeldung.' + NL + NL;
+    body += NL + 'Kandidaten ab 01. September 2026 — ich bitte um Rückmeldung.' + NL + NL;
     body += 'Freundliche Grüsse' + NL + (kundenName || 'Interessent');
 
     _flexMailto('mailto:info@flexclean-relaxteam.com?subject=' + betreff + '&body=' + encodeURIComponent(body));
@@ -11744,7 +11792,7 @@ function kpRenderBuchung() {
   return;
 
   const rec       = window._kapRundungOverride || window._kapRec || 0;
-  const preis     = window._stundenPreis || 55;
+  const preis     = window._stundenPreis || 28.5;
   const haeuf     = window._modalHaeufigkeit || '';
 
   // Kandidat: zuerst aus Arbeitsspeicher, sonst ersten gespeicherten laden
@@ -11889,7 +11937,7 @@ function kpSnapshotAnforderungen() {
     stundenUnterhalt: (() => { const qm = parseFloat(g('inp-qm')?.value) || 0; return qm > 0 ? Math.round((qm * 0.95 / 60) * 12) / 12 : (parseFloat(g('sel-unterhalt')?.value) || 0); })(),
     stundenNurUnterhalt: (() => { const qm = parseFloat(g('inp-qm')?.value) || 0; return qm > 0 ? Math.round((qm * 0.95 / 60) * 12) / 12 : (parseFloat(g('sel-unterhalt')?.value) || 0); })(),
     stundenGrund: (() => { const cb = document.getElementById('cb-grundreinigung'); const qm = parseFloat(g('inp-qm')?.value) || 0; return (cb && cb.checked) ? (qm > 0 ? Math.round((qm * 5 / 60) * 4) / 4 : (parseFloat(g('sel-grund')?.value) || 0)) : 0; })(),
-    preis:        window._stundenPreis || 55,
+    preis:        window._stundenPreis || 28.5,
     massage:      !!(document.getElementById('cb-massage')?.checked),
     massageMin:   (document.getElementById('cb-massage')?.checked) ? (parseInt(document.getElementById('massage-zeit-val')?.value) || parseInt(document.getElementById('cb-massage')?.dataset.min) || 60) : 0,
     hinweis:      g('sonstige-hinweise-text')?.value || '',
@@ -12273,7 +12321,7 @@ function kpRenderBuchenPanel(snap) {
   // Immer snap als Primärquelle — window._* nur als Fallback wenn snap noch nicht gespeichert
   const rec          = snap?.stundenFinal || snap?.stundenRec || snap?.stundenUnterhalt || window._kapRundungOverride || window._kapRec || 0;
   const recRaw       = snap?.stundenRec   || snap?.stundenUnterhalt || window._kapRec || 0;
-  const preis        = snap?.preis        || window._stundenPreis || 55;
+  const preis        = snap?.preis        || window._stundenPreis || 28.5;
   const haeuf        = haeufLabels[snap?.haeufUnterhalt || snap?.haeufGrund || window._modalHaeufigkeit] || '–';
   const aufgerundet  = !!(snap?.istAufgerundet) && rec > 0 && recRaw > 0 && Math.abs(rec - recRaw) > 0.01;
   const stundenText  = fmtH(rec);
@@ -16396,7 +16444,7 @@ function kpErstelleSeparateRechnung() {
 
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 55;
+  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
 
   // Slots die verrechnet werden sollen — alleNeueSlots falls vorhanden, sonst nur der eine blKey
   const slots = buch.alleNeueSlots || [{ blKey: buch.blKey, leistung: buch.leistung }];
@@ -16576,7 +16624,7 @@ function kpErstelleTagesRechnung(dateKey, nurBlKey) {
   // ── Snap für Preise / Stunden
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 55;
+  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
 
   // ── Leistungen sammeln: wenn nurBlKey angegeben, NUR diesen Slot verrechnen
   // { leistungLabel → blKey }
@@ -16892,7 +16940,7 @@ function kpErstelleRechnung() {
   // Snap für Preise und Stunden
   let snap = window._anfSnapAktuell;
   if (!snap) { try { snap = JSON.parse(localStorage.getItem(KP_KEY) || '{}').anfSnap; } catch(e) {} }
-  const preis = (snap && snap.preis) || window._stundenPreis || 55;
+  const preis = (snap && snap.preis) || window._stundenPreis || 28.5;
 
   const _LB_HAEUF_LOCAL = {
     '1pw':{label:'1× / Woche',pw:1,pj:52},'2pw':{label:'2× / Woche',pw:2,pj:104},
@@ -17446,7 +17494,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <span style="font-size:1.3rem;flex-shrink:0;">🚀</span>
           <div style="font-size:0.84rem;color:#1e3529;line-height:1.6;">
             <strong>Unsere Website erscheint diese Woche!</strong><br>
-            Kandidaten sind ab <strong>01. Juni 2026</strong> für Kunden verfügbar. Laden Sie jetzt Ihre Unterlagen hoch — damit Ihr Profil rechtzeitig bereit ist.
+            Kandidaten sind ab <strong>01. September 2026</strong> für Kunden verfügbar. Laden Sie jetzt Ihre Unterlagen hoch — damit Ihr Profil rechtzeitig bereit ist.
           </div>
         </div>
 
@@ -17472,7 +17520,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <!-- Nächste Schritte Info -->
         <div style="background:#fef3c7;border:1.5px solid #f59e0b;border-radius:10px;padding:12px 16px;margin-bottom:20px;font-size:0.82rem;color:#92400e;line-height:1.5;">
           ℹ️ <strong>Wie geht es weiter?</strong><br>
-          Nach dem Upload prüft FLEXCLEAN & RELAXTEAM Ihre Unterlagen und schaltet Ihr Profil für Kunden frei. Sie erhalten eine Bestätigung per E-Mail. Einsätze starten ab dem <strong>1. Juni 2026</strong>.
+          Nach dem Upload prüft FLEXCLEAN & RELAXTEAM Ihre Unterlagen und schaltet Ihr Profil für Kunden frei. Sie erhalten eine Bestätigung per E-Mail. Einsätze starten ab dem <strong>1. September 2026</strong>.
         </div>
 
         <!-- E-Mail Anfrage Button -->
